@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- -->
+<!-- Door Jiro Ghianni: zie alle notities in het CSS bestand -->
+<!-- -->
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="base/base-styles.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Opdracht 1 - selectors</title>
+    <title>Opdracht 1 - selectors - Jiro</title>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <nav>
+            <nav class="mainmenu">
                 <ul>
                     <li><a href="https://ciaotutti.nl/about">About</a></li>
                     <li><a href="https://ciaotutti.nl/articles">Articles</a></li>
@@ -19,9 +24,9 @@
             </nav>
         </header>
 
-        <img src="assets/header-image.jpg" alt="Tutti">
+        <img id="hero" src="assets/header-image.jpg" alt="Tutti">
 
-        <main>
+        <main class="content">
             <h1>Latest Articles</h1>
             <article>
                 <h3>Quisque Tortor Lacus</h3>
@@ -52,7 +57,7 @@
         </main>
 
         <footer>
-            <span>&copy;2020 Ciao Tutti Blog</span>
+            <span class="copyright">&copy;2020 Ciao Tutti Blog</span>
         </footer>
     </div>
 </body>
