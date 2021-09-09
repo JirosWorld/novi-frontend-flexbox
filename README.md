@@ -1,5 +1,9 @@
 # Opdrachtbeschrijving
 
+## ~ door Jiro ~
+
+### Jiro's huiswerk staat toegelicht in de commentaren in de CSS bestanden
+
 ## Opdracht 1 - CSS Selectors
 
 De styling van de webpagina Ciao Tutti in `index.html` (map `/opdracht-1`) is nog niet helemaal af! Gebruik het CSS bestand `styles.css` (in dezelfde map) om de styling af te maken. In dat bestand staat (in commentaar) precies wat er moet gebeuren.
