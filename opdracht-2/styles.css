@@ -22,14 +22,17 @@
 }
 .three ul {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: space-between;
 }
 .three li {
     list-style-type: none;
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 80px;
-    /* op de een of andere manier lijkt flex-basis hier ALLEEN te werken als Shrink en Grow geset worden, maar de tussenruimte is niet goed. */
+    flex-basis: 100px;
+    /* op de een of andere manier lijkt flex-basis hier ALLEEN te werken als Shrink en Grow geset worden, maar de tussenruimte is niet goed, omdat de breedte van dee LI nu onafhankelijk is va nde content, maar dat is niet de juiste oplossing. */
 }
 
 div.four {
@@ -46,44 +49,48 @@ div.four {
     justify-content: center;
 }
 
-/* stijlen voor Mobile-first, dus; eerst default stijlen voor kleine mobiele schermen daarna pas Media-Queries voor grotere schermen */
+/* stijlen voor Mobile-first, dus; eerst default stijlen, zonder media-query, voor kleine mobiele schermen daarna pas Media-Queries voor grotere schermen - ik weet niet of dit de juiste oplossing is */
 
 .five {
     display: flex;
     flex-direction: column;
+    /* column: default voor kleinste schermen */
     flex-wrap: wrap;
 }
 .five article {
-    flex-basis: 400px;
     padding: 15px;
     flex-grow: 1;
     flex-shrink: 1;
 }
+
+/* Als je het browserscherm breder/smaller sleept dan zie je de veranderingen voor grotere schermen */
+
 @media screen and (min-width: 500px) {
     .five {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
-        /*align-items: flex-start;*/
         align-content: flex-start;
     }
+    .five article {
+        flex-basis: 400px;
+    /*    dit zorgt er volgens mij voor dat het derde element naar de volgende row breekt bij smallere schemen */
+    }
 }
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1200px) {
     .five {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
-        /*align-items: flex-start;*/
         align-content: flex-start;
     }
     .five article {
-        flex-basis: initial;
-        padding: 15px;
         flex-grow: 0;
         flex-shrink: 0;
-        width: calc(400px - 30px);
-        /*    maximaal 400px als breekpunt, 400-15-15 = 370 px */
+        flex-basis: initial;
+        width: calc(33.3% - 30px);
+            /* dit is mijn lelijke oplossing, betekent: maximaal 400px als breekpunt met padding die dit block verbreedt, 400-15-15 = 370 px */
     }
 }
