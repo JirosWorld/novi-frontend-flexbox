@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+/*    die laatste zorgt ervoor dat alle flex-items/list-items op 1 lijn komen te liggen */
 }
 .three ul {
     display: flex;
@@ -78,7 +79,7 @@ div.four {
     }
     .five article {
         flex-basis: 400px;
-    /*    dit zorgt er volgens mij voor dat het derde element naar de volgende row breekt bij smallere schemen */
+    /*    dit zorgt er volgens mij voor dat het derde element naar de volgende row breekt bij smallere schermen */
     }
 }
 @media screen and (min-width: 1200px) {
