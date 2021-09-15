@@ -2,7 +2,7 @@
 
 ## ~ door Jiro ~
 
-### <span style="color:red">Jiro's huiswerk staat toegelicht in de commentaren in de CSS bestanden</span>
+![Website](opdracht-1/assets/jiro-comment.png "Jiro commentaar")
 
 ## Opdracht 1 - CSS Selectors
 
