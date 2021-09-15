@@ -26,13 +26,16 @@
     flex-grow: 0;
     flex-shrink: 0;
     justify-content: space-between;
+    /*align-items: stretch;*/
+/*    Dit laatste is misschien de oplossing om de tussenruimte overal hetzelfde te maken?*/
 }
 .three li {
     list-style-type: none;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 100px;
-    /* op de een of andere manier lijkt flex-basis hier ALLEEN te werken als Shrink en Grow geset worden, maar de tussenruimte is niet goed, omdat de breedte van dee LI nu onafhankelijk is va nde content, maar dat is niet de juiste oplossing. */
+    /* Het probleem hier is dat de LI-items geen gelijke afstand tot elkaar hebben, terwijl we dat juist wel willen. */
+    /* op de een of andere manier lijkt flex-basis hier ALLEEN te werken als Shrink en Grow geset worden, maar de tussenruimte is niet goed, omdat de breedte van dee LI nu onafhankelijk is van de content, maar dit is niet de juiste oplossing. */
 }
 
 div.four {
@@ -63,7 +66,7 @@ div.four {
     flex-shrink: 1;
 }
 
-/* Als je het browserscherm breder/smaller sleept dan zie je de veranderingen voor grotere schermen */
+/* Als je het browserscherm/window breder/smaller sleept dan zie je de veranderingen voor grotere schermen */
 
 @media screen and (min-width: 500px) {
     .five {
