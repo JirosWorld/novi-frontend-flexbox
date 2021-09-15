@@ -2,7 +2,7 @@
 
 ## ~ door Jiro ~
 
-### Jiro's huiswerk staat toegelicht in de commentaren in de CSS bestanden
+![Website](opdracht-1/assets/jiro-comment.png "Jiro commentaar")
 
 ## Opdracht 1 - CSS Selectors
 
